@@ -123,7 +123,8 @@ void inserirElemento()
 	{
 		return;
 	}
-
+	
+	
 	cout << "Digite o elemento: ";
 	cin >> novo->valor;
 	novo->prox = NULL;
@@ -134,6 +135,12 @@ void inserirElemento()
 	}
 	else
 	{
+		if (posicaoElemento(novo->valor) != NULL) {
+
+			cout << "O numero digitado ja foi adicionado" << endl;
+			return;
+
+		}
 		// procura o final da lista
 		NO* aux = primeiro;
 		while (aux->prox != NULL) {
@@ -146,10 +153,28 @@ void inserirElemento()
 void excluirElemento()
 {
 	
+	
 }
 
 void buscarElemento()
 {
+	int busca;
+	cout << "Digite o elemento que deseja buscar: ";
+	cin >> busca;
+
+	posicaoElemento(busca);
+
+	if (posicaoElemento(busca) != NULL) {
+
+		cout << "Encontrado" << endl;
+	}
+	else {
+		cout << "Nao encontrado" << endl;
+
+	}
+
+	
+
 	
 }
 
