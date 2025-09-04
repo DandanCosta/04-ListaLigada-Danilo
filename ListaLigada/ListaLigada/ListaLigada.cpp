@@ -165,10 +165,10 @@ void excluirElemento()
 	    return;
 	}
 	NO* anterior = NULL;
-	NO* atul = primeiro;
+	NO* atual = primeiro;
 	
 	while(atual != NULL){
-	    if(valot == atual->valor){
+	    if(valor == atual->valor){
 	        if(primeiro->valor == valor){
 	           primeiro = primeiro->prox;
 	           
